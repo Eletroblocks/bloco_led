@@ -7963,12 +7963,23 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <library name="Eletroblocks Lib">
 <packages>
 <package name="3CONECTOR">
-<pad name="2" x="0" y="0" drill="0.6"/>
-<pad name="1" x="0" y="2.54" drill="0.6"/>
-<pad name="3" x="0" y="-2.54" drill="0.6"/>
-<hole x="0" y="2.54" drill="0.5"/>
-<hole x="0" y="0" drill="0.5"/>
-<hole x="0" y="-2.54" drill="0.5"/>
+<pad name="2" x="0" y="0" drill="0.75"/>
+<pad name="1" x="0" y="2.54" drill="0.75"/>
+<pad name="3" x="0" y="-2.54" drill="0.75"/>
+<hole x="0" y="2.54" drill="0.75"/>
+<hole x="0" y="0" drill="0.75"/>
+<hole x="0" y="-2.54" drill="0.75"/>
+<text x="-1.27" y="-3.81" size="0.8128" layer="21" font="fixed" rot="R90">&gt;NAME</text>
+</package>
+<package name="LED5050">
+<smd name="P$1" x="-1.6" y="0" dx="5" dy="1.8" layer="1" rot="R90"/>
+<smd name="P$2" x="1.6" y="0" dx="5" dy="1.8" layer="1" rot="R90"/>
+<wire x1="-2.5" y1="2.5" x2="2.5" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-2.5" x2="2.5" y2="-2.5" width="0.127" layer="21"/>
+<wire x1="2.5" y1="-2.5" x2="2.5" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-2.5" y1="-2.5" x2="-2.5" y2="2.5" width="0.127" layer="21"/>
+<circle x="-2.5" y="2.5" radius="0.1" width="0.127" layer="21"/>
+<text x="0" y="-1.27" size="0.6096" layer="21" font="fixed" rot="R90">LED</text>
 </package>
 </packages>
 <symbols>
@@ -7981,6 +7992,15 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-2" y1="-6" x2="2" y2="-6" width="0.254" layer="94"/>
 <wire x1="2" y1="-6" x2="2" y2="6" width="0.254" layer="94"/>
 <text x="-2" y="7" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="LED5050">
+<pin name="P$1" x="0" y="0" length="middle" rot="R180"/>
+<wire x1="0" y1="-2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<pin name="P$2" x="5.08" y="0" length="middle"/>
+<text x="5.08" y="-2.54" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -8018,178 +8038,15 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </device>
 </devices>
 </deviceset>
-</devicesets>
-</library>
-<library name="PLCC-6-LED">
-<packages>
-<package name="F50360" urn="urn:adsk.eagle:footprint:15751/1">
-<description>&lt;b&gt;Full color Z-Power LED RGB&lt;/b&gt;&lt;p&gt;
-Source: http://www.seoulsemicon.co.kr .. F50360.pdf</description>
-<wire x1="2.9" y1="-2.25" x2="2.9" y2="2.25" width="0.2032" layer="51"/>
-<wire x1="2.75" y1="2.4" x2="-2.75" y2="2.4" width="0.2032" layer="51"/>
-<wire x1="-2.9" y1="2.25" x2="-2.9" y2="-2.25" width="0.2032" layer="51"/>
-<wire x1="-2.75" y1="-2.4" x2="2.75" y2="-2.4" width="0.2032" layer="51"/>
-<wire x1="-2.9" y1="2.25" x2="-2.75" y2="2.4" width="0.2032" layer="51" curve="90"/>
-<wire x1="2.75" y1="2.4" x2="2.9" y2="2.25" width="0.2032" layer="51" curve="90"/>
-<wire x1="2.9" y1="-2.25" x2="2.75" y2="-2.4" width="0.2032" layer="51" curve="90"/>
-<wire x1="-2.75" y1="-2.4" x2="-2.9" y2="-2.25" width="0.2032" layer="51" curve="90"/>
-<circle x="0" y="0" radius="2" width="0.2032" layer="51"/>
-<circle x="-2" y="-1.35" radius="0.2" width="0" layer="21"/>
-<smd name="NC" x="0" y="0" dx="3.5" dy="4.7" layer="1"/>
-<smd name="GA" x="2.55" y="0" dx="0.6" dy="1.2" layer="1" rot="R180"/>
-<smd name="GC" x="-2.55" y="0" dx="0.6" dy="1.2" layer="1"/>
-<smd name="BA" x="2.55" y="1.825" dx="0.6" dy="1.05" layer="1" rot="R180"/>
-<smd name="BC" x="-2.55" y="1.825" dx="0.6" dy="1.05" layer="1"/>
-<smd name="RC" x="-2.55" y="-1.825" dx="0.6" dy="1.05" layer="1"/>
-<smd name="RA" x="2.55" y="-1.825" dx="0.6" dy="1.05" layer="1" rot="R180"/>
-<text x="-2.525" y="2.6" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.575" y="-3.9" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.25" y1="-0.5" x2="-0.25" y2="0.5" layer="51" rot="R270"/>
-<rectangle x1="0.25" y1="0.25" x2="1.25" y2="1.25" layer="51" rot="R270"/>
-<rectangle x1="0.25" y1="-1.25" x2="1.25" y2="-0.25" layer="51" rot="R270"/>
-<rectangle x1="-0.5" y1="-1.25" x2="-0.25" y2="-1" layer="51" rot="R270"/>
-<rectangle x1="-0.5" y1="1" x2="-0.25" y2="1.25" layer="51" rot="R270"/>
-<rectangle x1="-1.25" y1="1" x2="-1" y2="1.25" layer="51" rot="R270"/>
-</package>
-<package name="PLCC-6-LED">
-<description>&lt;h3&gt;PLCC-6-LED&lt;/h3&gt;
-
-&lt;p&gt;Specifications:
-&lt;ul&gt;&lt;li&gt;Pin count: 6&lt;/li&gt;
-&lt;li&gt;Size: 3.2*2.8*1.39mm&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;&lt;b&gt;Datasheet referenced for footprint:&lt;/b&gt; &lt;a href="http://www.osram-os.com/Graphics/XPic9/00134830_0.pdf"&gt;LTRB GFSF&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Example device:
-&lt;ul&gt;&lt;li&gt;RGB-LED-PLCC&lt;/li&gt;</description>
-<wire x1="1.5" y1="1.6" x2="1.5" y2="-1.6" width="0.127" layer="51"/>
-<wire x1="1.5" y1="-1.6" x2="-1.5" y2="-1.6" width="0.127" layer="51"/>
-<wire x1="-1.5" y1="-1.6" x2="-1.5" y2="1.6" width="0.127" layer="51"/>
-<wire x1="-1.5" y1="1.6" x2="1.5" y2="1.6" width="0.127" layer="51"/>
-<circle x="-1.3" y="1.3" radius="0.1" width="0" layer="51"/>
-<wire x1="-1.4" y1="1.7" x2="1.4" y2="1.7" width="0.2032" layer="21"/>
-<wire x1="1.4" y1="-1.7" x2="-1.4" y2="-1.7" width="0.2032" layer="21"/>
-<circle x="-0.4" y="1.1" radius="0.1" width="0.2032" layer="21"/>
-<text x="0" y="1.905" size="0.6096" layer="25" ratio="20" align="bottom-center">&gt;NAME</text>
-<text x="0" y="-1.905" size="0.6096" layer="27" ratio="20" align="top-center">&gt;VALUE</text>
-<circle x="-1.778" y="1.905" radius="0.1" width="0.2032" layer="21"/>
-<smd name="CB" x="-1.475" y="1.1" dx="1.3" dy="0.7" layer="1"/>
-<smd name="CR" x="-1.475" y="0" dx="1.3" dy="0.7" layer="1"/>
-<smd name="CG" x="-1.475" y="-1.1" dx="1.3" dy="0.7" layer="1"/>
-<smd name="AG" x="1.475" y="-1.1" dx="1.3" dy="0.7" layer="1"/>
-<smd name="AR" x="1.475" y="0" dx="1.3" dy="0.7" layer="1"/>
-<smd name="AB" x="1.475" y="1.1" dx="1.3" dy="0.7" layer="1"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="F50360" urn="urn:adsk.eagle:package:15875/1" type="box">
-<description>Full color Z-Power LED RGB
-Source: http://www.seoulsemicon.co.kr .. F50360.pdf</description>
-<packageinstances>
-<packageinstance name="F50360"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="LED-RGB-D">
-<wire x1="6.35" y1="0.889" x2="5.08" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-1.143" x2="3.81" y2="0.889" width="0.254" layer="94"/>
-<wire x1="6.35" y1="-1.143" x2="5.08" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-1.143" x2="3.81" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="6.35" y1="0.889" x2="5.08" y2="0.889" width="0.254" layer="94"/>
-<wire x1="5.08" y1="0.889" x2="3.81" y2="0.889" width="0.254" layer="94"/>
-<wire x1="3.048" y1="0.635" x2="2.159" y2="-0.254" width="0.1524" layer="94"/>
-<wire x1="3.81" y1="-0.127" x2="2.921" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="1.27" y1="0.889" x2="0" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.143" x2="-1.27" y2="0.889" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-1.143" x2="0" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.143" x2="-1.27" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0.889" x2="0" y2="0.889" width="0.254" layer="94"/>
-<wire x1="0" y1="0.889" x2="-1.27" y2="0.889" width="0.254" layer="94"/>
-<wire x1="-2.032" y1="0.635" x2="-2.921" y2="-0.254" width="0.1524" layer="94"/>
-<wire x1="-1.27" y1="-0.127" x2="-2.159" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="-3.81" y1="0.889" x2="-5.08" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-1.143" x2="-6.35" y2="0.889" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="-1.143" x2="-5.08" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-1.143" x2="-6.35" y2="-1.143" width="0.254" layer="94"/>
-<wire x1="-3.81" y1="0.889" x2="-5.08" y2="0.889" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="0.889" x2="-6.35" y2="0.889" width="0.254" layer="94"/>
-<wire x1="-7.112" y1="0.635" x2="-8.001" y2="-0.254" width="0.1524" layer="94"/>
-<wire x1="-6.35" y1="-0.127" x2="-7.239" y2="-1.016" width="0.1524" layer="94"/>
-<wire x1="-5.08" y1="-1.143" x2="-5.08" y2="-2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="-1.143" width="0.1524" layer="94"/>
-<wire x1="-5.08" y1="0.889" x2="-5.08" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="0.889" width="0.1524" layer="94"/>
-<wire x1="5.08" y1="0.889" x2="5.08" y2="2.54" width="0.1524" layer="94"/>
-<wire x1="5.08" y1="-2.54" x2="5.08" y2="-1.143" width="0.1524" layer="94"/>
-<text x="7.62" y="0.254" size="1.778" layer="95">&gt;NAME</text>
-<text x="7.62" y="-1.905" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-5.334" y="1.524" size="0.4064" layer="94" rot="R180">RED</text>
-<text x="-0.254" y="1.524" size="0.4064" layer="94" rot="R180">GREEN</text>
-<text x="4.826" y="1.524" size="0.4064" layer="94" rot="R180">BLUE</text>
-<pin name="BC" x="5.08" y="-2.54" visible="off" length="point" direction="pas" rot="R90"/>
-<pin name="GC" x="0" y="-2.54" visible="off" length="point" direction="pas" rot="R90"/>
-<pin name="RC" x="-5.08" y="-2.54" visible="off" length="point" direction="pas" rot="R90"/>
-<pin name="RA" x="-5.08" y="2.54" visible="off" length="point" direction="pas" rot="R270"/>
-<pin name="GA" x="0" y="2.54" visible="off" length="point" direction="pas" rot="R270"/>
-<pin name="BA" x="5.08" y="2.54" visible="off" length="point" direction="pas" rot="R270"/>
-<polygon width="0.1524" layer="94">
-<vertex x="2.032" y="0.127"/>
-<vertex x="1.778" y="-0.635"/>
-<vertex x="2.54" y="-0.381"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="2.794" y="-0.635"/>
-<vertex x="2.54" y="-1.397"/>
-<vertex x="3.302" y="-1.143"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-3.048" y="0.127"/>
-<vertex x="-3.302" y="-0.635"/>
-<vertex x="-2.54" y="-0.381"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-2.286" y="-0.635"/>
-<vertex x="-2.54" y="-1.397"/>
-<vertex x="-1.778" y="-1.143"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-8.128" y="0.127"/>
-<vertex x="-8.382" y="-0.635"/>
-<vertex x="-7.62" y="-0.381"/>
-</polygon>
-<polygon width="0.1524" layer="94">
-<vertex x="-7.366" y="-0.635"/>
-<vertex x="-7.62" y="-1.397"/>
-<vertex x="-6.858" y="-1.143"/>
-</polygon>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="PLCC6" prefix="LED">
-<description>&lt;b&gt;Full color Z-Power LED RGB&lt;/b&gt; P5-II Series&lt;p&gt;
-Source: http://www.seoulsemicon.co.kr .. F50360.pdf</description>
+<deviceset name="LED5050">
 <gates>
-<gate name="G$1" symbol="LED-RGB-D" x="0" y="0"/>
+<gate name="G$1" symbol="LED5050" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="F50360">
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:15875/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="POPULARITY" value="0" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="PLCC-6" package="PLCC-6-LED">
+<device name="" package="LED5050">
 <connects>
-<connect gate="G$1" pin="BA" pad="AB"/>
-<connect gate="G$1" pin="BC" pad="CB"/>
-<connect gate="G$1" pin="GA" pad="AG"/>
-<connect gate="G$1" pin="GC" pad="CG"/>
-<connect gate="G$1" pin="RA" pad="AR"/>
-<connect gate="G$1" pin="RC" pad="CR"/>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -8475,7 +8332,7 @@ Based on the following sources:
 <pin name="I1" x="-7.62" y="-2.54" visible="pad" length="middle" direction="in" swaplevel="1"/>
 <pin name="O" x="7.62" y="0" visible="pad" length="middle" direction="out" function="dot" rot="R180"/>
 </symbol>
-<symbol name="PWRN" urn="urn:adsk.eagle:symbol:713/1" library_version="4">
+<symbol name="PWRN" urn="urn:adsk.eagle:symbol:932/2" library_version="7">
 <text x="-1.27" y="-0.635" size="1.778" layer="95">&gt;NAME</text>
 <text x="1.905" y="2.54" size="1.27" layer="95" rot="R90">VDD</text>
 <text x="1.905" y="-5.842" size="1.27" layer="95" rot="R90">VSS</text>
@@ -8484,7 +8341,7 @@ Based on the following sources:
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="4011" urn="urn:adsk.eagle:component:885/5" prefix="IC" library_version="4">
+<deviceset name="4011" urn="urn:adsk.eagle:component:885/6" prefix="IC" library_version="7">
 <description>Quad 2-input &lt;b&gt;NAND&lt;/b&gt;</description>
 <gates>
 <gate name="A" symbol="4011" x="15.24" y="5.08" swaplevel="1"/>
@@ -8561,8 +8418,8 @@ Based on the following sources:
 </classes>
 <groups>
 <schematic_group name="CONNECTIONS"/>
-<schematic_group name="LED_CONTROL"/>
-<schematic_group name="BUFFER"/>
+<schematic_group name="LED_CONTROL1"/>
+<schematic_group name="BUFFER1"/>
 </groups>
 <parts>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8574,85 +8431,85 @@ Based on the following sources:
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J1" library="Eletroblocks Lib" deviceset="CONECTOR_MACHO" device=""/>
 <part name="J2" library="Eletroblocks Lib" deviceset="CONECTOR_FEMEA" device=""/>
-<part name="LED1" library="PLCC-6-LED" deviceset="PLCC6" device="PLCC-6"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805W" package3d_urn="urn:adsk.eagle:package:23537/2" value="150R"/>
-<part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="Q1" library="semicon-smd-ipc" library_urn="urn:adsk.eagle:library:353" deviceset="NPN-TRANSISTOR_" device="SOT23" package3d_urn="urn:adsk.eagle:package:28738/2" value="BC817"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805W" package3d_urn="urn:adsk.eagle:package:23537/2" value="1K"/>
 <part name="U1" library="40xx" library_urn="urn:adsk.eagle:library:80" deviceset="4011" device="D" package3d_urn="urn:adsk.eagle:package:823/2" value="74HC132"/>
-<part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
+<part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="U$1" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="GND5" gate="1" x="32.09" y="277.696" smashed="yes" rot="R180" grouprefs="CONNECTIONS">
-<attribute name="VALUE" x="34.63" y="280.436" size="1.778" layer="96" rot="R180"/>
+<instance part="GND5" gate="1" x="24.47" y="110.056" smashed="yes" rot="R180" grouprefs="CONNECTIONS">
+<attribute name="VALUE" x="27.01" y="112.796" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="P+2" gate="VCC" x="31.658" y="258.436" smashed="yes" rot="R180" grouprefs="CONNECTIONS">
-<attribute name="VALUE" x="34.198" y="260.976" size="1.778" layer="96" rot="R270"/>
+<instance part="P+2" gate="VCC" x="24.038" y="90.796" smashed="yes" rot="R180" grouprefs="CONNECTIONS">
+<attribute name="VALUE" x="26.578" y="93.336" size="1.778" layer="96" rot="R270"/>
 </instance>
-<instance part="GND6" gate="1" x="75.7" y="257.076" smashed="yes" grouprefs="CONNECTIONS">
-<attribute name="VALUE" x="73.16" y="254.336" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="68.08" y="89.436" smashed="yes" grouprefs="CONNECTIONS">
+<attribute name="VALUE" x="65.54" y="86.696" size="1.778" layer="96"/>
 </instance>
-<instance part="P+3" gate="VCC" x="75.268" y="278.456" smashed="yes" grouprefs="CONNECTIONS">
-<attribute name="VALUE" x="72.728" y="275.916" size="1.778" layer="96" rot="R90"/>
+<instance part="P+3" gate="VCC" x="67.648" y="110.816" smashed="yes" grouprefs="CONNECTIONS">
+<attribute name="VALUE" x="65.108" y="108.276" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="C1" gate="G$1" x="105.58" y="269.5" smashed="yes" grouprefs="CONNECTIONS">
-<attribute name="NAME" x="107.104" y="269.881" size="1.778" layer="95"/>
-<attribute name="VALUE" x="107.104" y="264.801" size="1.778" layer="96"/>
+<instance part="C1" gate="G$1" x="97.96" y="101.86" smashed="yes" grouprefs="CONNECTIONS">
+<attribute name="NAME" x="99.484" y="102.241" size="1.778" layer="95"/>
+<attribute name="VALUE" x="99.484" y="97.161" size="1.778" layer="96"/>
 </instance>
-<instance part="P+4" gate="VCC" x="105.318" y="278.756" smashed="yes" grouprefs="CONNECTIONS">
-<attribute name="VALUE" x="102.778" y="276.216" size="1.778" layer="96" rot="R90"/>
+<instance part="P+4" gate="VCC" x="97.698" y="111.116" smashed="yes" grouprefs="CONNECTIONS">
+<attribute name="VALUE" x="95.158" y="108.576" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND2" gate="1" x="105.66" y="258.3" smashed="yes" grouprefs="CONNECTIONS">
-<attribute name="VALUE" x="103.12" y="255.56" size="1.778" layer="96"/>
+<instance part="GND2" gate="1" x="98.04" y="90.66" smashed="yes" grouprefs="CONNECTIONS">
+<attribute name="VALUE" x="95.5" y="87.92" size="1.778" layer="96"/>
 </instance>
-<instance part="J1" gate="G$1" x="12.14" y="268.29" smashed="yes" grouprefs="CONNECTIONS">
-<attribute name="NAME" x="10.14" y="275.29" size="1.778" layer="95"/>
+<instance part="J1" gate="G$1" x="4.52" y="100.65" smashed="yes" grouprefs="CONNECTIONS">
+<attribute name="NAME" x="2.52" y="107.65" size="1.778" layer="95"/>
 </instance>
-<instance part="J2" gate="G$1" x="50.5" y="268.2" smashed="yes" grouprefs="CONNECTIONS">
-<attribute name="NAME" x="48.5" y="275.2" size="1.778" layer="95"/>
+<instance part="J2" gate="G$1" x="42.88" y="100.56" smashed="yes" grouprefs="CONNECTIONS">
+<attribute name="NAME" x="40.88" y="107.56" size="1.778" layer="95"/>
 </instance>
-<instance part="LED1" gate="G$1" x="55.94890625" y="179.299996875" smashed="yes" grouprefs="LED_CONTROL">
-<attribute name="NAME" x="63.56890625" y="179.553996875" size="1.778" layer="95"/>
-<attribute name="VALUE" x="63.56890625" y="177.394996875" size="1.778" layer="96"/>
+<instance part="R2" gate="G$1" x="48.34690625" y="-2.428003125" smashed="yes" rot="R90" grouprefs="LED_CONTROL1">
+<attribute name="NAME" x="51.569384375" y="2.126528125" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="47.427425" y="-5.49124375" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R2" gate="G$1" x="55.96690625" y="162.671996875" smashed="yes" rot="R90" grouprefs="LED_CONTROL">
-<attribute name="NAME" x="59.189384375" y="167.226528125" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="55.047425" y="159.60875625" size="1.778" layer="96" rot="R90"/>
+<instance part="P+7" gate="VCC" x="48.32890625" y="28.931996875" smashed="yes" grouprefs="LED_CONTROL1">
+<attribute name="VALUE" x="45.78890625" y="26.391996875" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="P+1" gate="VCC" x="55.94890625" y="194.031996875" smashed="yes" grouprefs="LED_CONTROL">
-<attribute name="VALUE" x="53.40890625" y="191.491996875" size="1.778" layer="96" rot="R90"/>
+<instance part="GND7" gate="1" x="48.54490625" y="-28.976003125" smashed="yes" grouprefs="LED_CONTROL1">
+<attribute name="VALUE" x="46.00490625" y="-31.716003125" size="1.778" layer="96"/>
 </instance>
-<instance part="GND4" gate="1" x="56.16490625" y="136.123996875" smashed="yes" grouprefs="LED_CONTROL">
-<attribute name="VALUE" x="53.62490625" y="133.383996875" size="1.778" layer="96"/>
+<instance part="Q1" gate="G$1" x="45.96690625" y="-19.268003125" smashed="yes" grouprefs="LED_CONTROL1">
+<attribute name="NAME" x="41.81690625" y="-17.588003125" size="1.778" layer="95"/>
+<attribute name="VALUE" x="47.88460625" y="-19.2908625" size="1.778" layer="96"/>
 </instance>
-<instance part="Q1" gate="G$1" x="53.58690625" y="145.831996875" smashed="yes" grouprefs="LED_CONTROL">
-<attribute name="NAME" x="49.43690625" y="147.511996875" size="1.778" layer="95"/>
-<attribute name="VALUE" x="55.50460625" y="145.8091375" size="1.778" layer="96"/>
+<instance part="R1" gate="G$1" x="30.042603125" y="-19.35684375" smashed="yes" rot="R180" grouprefs="LED_CONTROL1">
+<attribute name="NAME" x="31.312603125" y="-15.77544375" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="31.312603125" y="-21.13484375" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R1" gate="G$1" x="37.662603125" y="145.74315625" smashed="yes" rot="R180" grouprefs="LED_CONTROL">
-<attribute name="NAME" x="38.932603125" y="149.32455625" size="1.778" layer="95" rot="R180"/>
-<attribute name="VALUE" x="38.932603125" y="143.96515625" size="1.778" layer="96" rot="R180"/>
+<instance part="U1" gate="A" x="33.57" y="60.9" smashed="yes" grouprefs="BUFFER1">
+<attribute name="NAME" x="37.59" y="63.225" size="1.778" layer="95"/>
+<attribute name="VALUE" x="37.6" y="57.76" size="1.778" layer="96"/>
 </instance>
-<instance part="U1" gate="A" x="41.19" y="226" smashed="yes" grouprefs="BUFFER">
-<attribute name="NAME" x="45.21" y="228.325" size="1.778" layer="95"/>
-<attribute name="VALUE" x="45.22" y="222.86" size="1.778" layer="96"/>
+<instance part="U1" gate="D" x="64.05" y="60.9" smashed="yes" grouprefs="BUFFER1">
+<attribute name="NAME" x="66.59" y="64.075" size="1.778" layer="95"/>
+<attribute name="VALUE" x="66.59" y="55.82" size="1.778" layer="96"/>
 </instance>
-<instance part="U1" gate="D" x="71.67" y="226" smashed="yes" grouprefs="BUFFER">
-<attribute name="NAME" x="74.21" y="229.175" size="1.778" layer="95"/>
-<attribute name="VALUE" x="74.21" y="220.92" size="1.778" layer="96"/>
+<instance part="U1" gate="P" x="33.51" y="60.86" smashed="yes" grouprefs="BUFFER1"/>
+<instance part="P+8" gate="VCC" x="33.492" y="72.02" smashed="yes" grouprefs="BUFFER1">
+<attribute name="VALUE" x="35.76" y="74.622" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="U1" gate="P" x="41.13" y="225.96" smashed="yes" grouprefs="BUFFER"/>
-<instance part="P+5" gate="VCC" x="41.112" y="237.12" smashed="yes" grouprefs="BUFFER">
-<attribute name="VALUE" x="43.38" y="239.722" size="1.778" layer="96" rot="R180"/>
+<instance part="GND8" gate="1" x="33.56" y="49.536" smashed="yes" grouprefs="BUFFER1">
+<attribute name="VALUE" x="31.02" y="46.796" size="1.778" layer="96"/>
 </instance>
-<instance part="GND1" gate="1" x="41.18" y="214.636" smashed="yes" grouprefs="BUFFER">
-<attribute name="VALUE" x="38.64" y="211.896" size="1.778" layer="96"/>
+<instance part="U$1" gate="G$1" x="48.36921875" y="15.029178125" smashed="yes" rot="R270">
+<attribute name="NAME" x="40.8432" y="12.047215625" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="42.9412375" y="17.818096875" size="1.778" layer="96" rot="R270"/>
 </instance>
 </instances>
 <busses>
@@ -8660,157 +8517,145 @@ Based on the following sources:
 <nets>
 <net name="SIGNAL_IN" class="0">
 <segment>
-<wire x1="19.526" y1="268.39" x2="19.526" y2="268.482" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="11.906" y1="100.75" x2="11.906" y2="100.842" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="12.14" y1="268.29" x2="12.14" y2="268.25" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="12.14" y1="268.25" x2="32.13" y2="268.25" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<label x="32.04" y="268.25" size="1.778" layer="95" xref="yes" grouprefs="CONNECTIONS"/>
+<wire x1="4.52" y1="100.65" x2="4.52" y2="100.61" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="4.52" y1="100.61" x2="24.51" y2="100.61" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<label x="24.42" y="100.61" size="1.778" layer="95" xref="yes" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="I0"/>
 <pinref part="U1" gate="A" pin="I1"/>
-<wire x1="33.57" y1="228.54" x2="33.57" y2="223.46" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<wire x1="33.57" y1="228.54" x2="33.57" y2="226" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<wire x1="33.57" y1="226" x2="25.95" y2="226" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<junction x="33.57" y="228.54" grouprefs="BUFFER"/>
-<label x="25.95" y="226" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="BUFFER"/>
+<wire x1="25.95" y1="63.44" x2="25.95" y2="58.36" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<wire x1="25.95" y1="63.44" x2="25.95" y2="60.9" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<wire x1="25.95" y1="60.9" x2="18.33" y2="60.9" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<junction x="25.95" y="63.44" grouprefs="BUFFER1"/>
+<label x="18.33" y="60.9" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="BUFFER1"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="105.58" y1="264.42" x2="105.66" y2="264.42" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="105.66" y1="264.42" x2="105.66" y2="260.84" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="97.96" y1="96.78" x2="98.04" y2="96.78" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="98.04" y1="96.78" x2="98.04" y2="93.2" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="3"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="50.5" y1="264.2" x2="75.7" y2="264.2" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="75.7" y1="264.2" x2="75.7" y2="259.616" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="42.88" y1="96.56" x2="68.08" y2="96.56" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="68.08" y1="96.56" x2="68.08" y2="91.976" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
 <pinref part="GND5" gate="1" pin="GND"/>
-<wire x1="12.14" y1="272.29" x2="32.09" y2="272.29" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="32.09" y1="272.29" x2="32.09" y2="275.156" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="4.52" y1="104.65" x2="24.47" y2="104.65" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="24.47" y1="104.65" x2="24.47" y2="107.516" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
-<pinref part="GND4" gate="1" pin="GND"/>
+<pinref part="GND7" gate="1" pin="GND"/>
 <pinref part="Q1" gate="G$1" pin="E"/>
-<wire x1="56.16490625" y1="138.663996875" x2="56.16490625" y2="140.751996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<wire x1="56.16490625" y1="140.751996875" x2="56.12690625" y2="140.751996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
+<wire x1="48.54490625" y1="-26.436003125" x2="48.54490625" y2="-24.348003125" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
+<wire x1="48.54490625" y1="-24.348003125" x2="48.50690625" y2="-24.348003125" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P" pin="VSS"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="41.13" y1="218.34" x2="41.13" y2="217.176" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<wire x1="41.13" y1="217.176" x2="41.18" y2="217.176" width="0.1524" layer="91" grouprefs="BUFFER"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="33.51" y1="53.24" x2="33.51" y2="52.076" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<wire x1="33.51" y1="52.076" x2="33.56" y2="52.076" width="0.1524" layer="91" grouprefs="BUFFER1"/>
 </segment>
 </net>
 <net name="SIGNAL_OUT" class="0">
 <segment>
 <pinref part="J2" gate="G$1" pin="2"/>
-<wire x1="50.5" y1="268.2" x2="75.43" y2="268.2" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="75.43" y1="268.2" x2="75.43" y2="268.31" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<label x="75.47" y="268.22" size="1.778" layer="95" xref="yes" grouprefs="CONNECTIONS"/>
+<wire x1="42.88" y1="100.56" x2="67.81" y2="100.56" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="67.81" y1="100.56" x2="67.81" y2="100.67" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<label x="67.85" y="100.58" size="1.778" layer="95" xref="yes" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="32.582603125" y1="145.74315625" x2="26.2559875" y2="145.74315625" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<wire x1="26.2559875" y1="145.74315625" x2="26.2559875" y2="145.770596875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<label x="26.3194875" y="145.801078125" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="LED_CONTROL"/>
+<wire x1="24.962603125" y1="-19.35684375" x2="18.6359875" y2="-19.35684375" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
+<wire x1="18.6359875" y1="-19.35684375" x2="18.6359875" y2="-19.329403125" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
+<label x="18.6994875" y="-19.298921875" size="1.778" layer="95" rot="R180" xref="yes" grouprefs="LED_CONTROL1"/>
 </segment>
 <segment>
 <pinref part="U1" gate="D" pin="O"/>
-<wire x1="79.29" y1="226" x2="86.91" y2="226" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<label x="86.91" y="226" size="1.778" layer="95" xref="yes" grouprefs="BUFFER"/>
+<wire x1="71.67" y1="60.9" x2="79.29" y2="60.9" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<label x="79.29" y="60.9" size="1.778" layer="95" xref="yes" grouprefs="BUFFER1"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="105.318" y1="276.216" x2="105.58" y2="276.216" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="105.58" y1="276.216" x2="105.58" y2="272.04" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="97.698" y1="108.576" x2="97.96" y2="108.576" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="97.96" y1="108.576" x2="97.96" y2="104.4" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
-<wire x1="50.5" y1="272.2" x2="75.268" y2="272.2" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="75.268" y1="272.2" x2="75.268" y2="275.916" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="42.88" y1="104.56" x2="67.648" y2="104.56" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="67.648" y1="104.56" x2="67.648" y2="108.276" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="3"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
-<wire x1="12.14" y1="264.29" x2="31.658" y2="264.29" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-<wire x1="31.658" y1="264.29" x2="31.658" y2="260.976" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
-</segment>
-<segment>
-<pinref part="LED1" gate="G$1" pin="RA"/>
-<pinref part="LED1" gate="G$1" pin="GA"/>
-<wire x1="50.86890625" y1="181.839996875" x2="55.94890625" y2="181.839996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<pinref part="LED1" gate="G$1" pin="BA"/>
-<wire x1="55.94890625" y1="181.839996875" x2="61.02890625" y2="181.839996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<junction x="55.94890625" y="181.839996875" grouprefs="LED_CONTROL"/>
-<wire x1="55.94890625" y1="181.839996875" x2="55.94890625" y2="188.189996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<pinref part="P+1" gate="VCC" pin="VCC"/>
-<wire x1="55.94890625" y1="191.491996875" x2="55.94890625" y2="181.839996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
+<wire x1="4.52" y1="96.65" x2="24.038" y2="96.65" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="24.038" y1="96.65" x2="24.038" y2="93.336" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 <segment>
 <pinref part="U1" gate="P" pin="VDD"/>
-<pinref part="P+5" gate="VCC" pin="VCC"/>
-<wire x1="41.13" y1="233.58" x2="41.13" y2="234.58" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<wire x1="41.13" y1="234.58" x2="41.112" y2="234.58" width="0.1524" layer="91" grouprefs="BUFFER"/>
+<pinref part="P+8" gate="VCC" pin="VCC"/>
+<wire x1="33.51" y1="68.48" x2="33.51" y2="69.48" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<wire x1="33.51" y1="69.48" x2="33.492" y2="69.48" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+</segment>
+<segment>
+<pinref part="P+7" gate="VCC" pin="VCC"/>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
+<wire x1="48.32890625" y1="26.391996875" x2="48.32890625" y2="15.029178125" width="0.1524" layer="91"/>
+<wire x1="48.32890625" y1="15.029178125" x2="48.36921875" y2="15.029178125" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$11" class="0">
 <segment>
-<wire x1="39.37" y1="268.38" x2="39.46" y2="268.38" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
+<wire x1="31.75" y1="100.74" x2="31.84" y2="100.74" width="0.1524" layer="91" grouprefs="CONNECTIONS"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="Q1" gate="G$1" pin="B"/>
-<wire x1="42.742603125" y1="145.74315625" x2="51.04690625" y2="145.7355375" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<wire x1="51.04690625" y1="145.7355375" x2="51.04690625" y2="145.831996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="LED1" gate="G$1" pin="BC"/>
-<wire x1="61.04690625" y1="176.759996875" x2="61.02890625" y2="176.759996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<pinref part="LED1" gate="G$1" pin="RC"/>
-<pinref part="LED1" gate="G$1" pin="GC"/>
-<wire x1="50.86890625" y1="176.759996875" x2="55.94890625" y2="176.759996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<wire x1="61.02890625" y1="176.759996875" x2="55.94890625" y2="176.759996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<junction x="61.02890625" y="176.759996875" grouprefs="LED_CONTROL"/>
-<junction x="55.94890625" y="176.759996875" grouprefs="LED_CONTROL"/>
-<pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="55.94890625" y1="176.759996875" x2="55.94890625" y2="167.751996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<wire x1="55.94890625" y1="167.751996875" x2="55.96690625" y2="167.751996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U1" gate="D" pin="I0"/>
-<pinref part="U1" gate="D" pin="I1"/>
-<wire x1="64.05" y1="228.54" x2="64.05" y2="223.46" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<pinref part="U1" gate="A" pin="O"/>
-<wire x1="48.81" y1="226" x2="64.05" y2="226" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<wire x1="64.05" y1="226" x2="64.05" y2="228.54" width="0.1524" layer="91" grouprefs="BUFFER"/>
-<junction x="64.05" y="228.54" grouprefs="BUFFER"/>
+<wire x1="35.122603125" y1="-19.35684375" x2="43.42690625" y2="-19.3644625" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
+<wire x1="43.42690625" y1="-19.3644625" x2="43.42690625" y2="-19.268003125" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
+<pinref part="U1" gate="D" pin="I0"/>
+<pinref part="U1" gate="D" pin="I1"/>
+<wire x1="56.43" y1="63.44" x2="56.43" y2="58.36" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<pinref part="U1" gate="A" pin="O"/>
+<wire x1="41.19" y1="60.9" x2="56.43" y2="60.9" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<wire x1="56.43" y1="60.9" x2="56.43" y2="63.44" width="0.1524" layer="91" grouprefs="BUFFER1"/>
+<junction x="56.43" y="63.44" grouprefs="BUFFER1"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="Q1" gate="G$1" pin="C"/>
-<wire x1="55.96690625" y1="157.591996875" x2="55.96690625" y2="150.911996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
-<wire x1="55.96690625" y1="150.911996875" x2="56.12690625" y2="150.911996875" width="0.1524" layer="91" grouprefs="LED_CONTROL"/>
+<wire x1="48.34690625" y1="-7.508003125" x2="48.34690625" y2="-14.188003125" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
+<wire x1="48.34690625" y1="-14.188003125" x2="48.50690625" y2="-14.188003125" width="0.1524" layer="91" grouprefs="LED_CONTROL1"/>
+</segment>
+</net>
+<net name="LED" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="P$2"/>
+<wire x1="48.34690625" y1="2.651996875" x2="48.34690625" y2="9.949178125" width="0.1524" layer="91"/>
+<wire x1="48.34690625" y1="9.949178125" x2="48.36921875" y2="9.949178125" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
