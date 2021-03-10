@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -7962,14 +7962,30 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 </library>
 <library name="Eletroblocks Lib">
 <packages>
-<package name="3CONECTOR">
+<package name="FEMALE">
 <pad name="2" x="0" y="0" drill="0.75"/>
 <pad name="1" x="0" y="2.54" drill="0.75"/>
 <pad name="3" x="0" y="-2.54" drill="0.75"/>
 <hole x="0" y="2.54" drill="0.75"/>
 <hole x="0" y="0" drill="0.75"/>
 <hole x="0" y="-2.54" drill="0.75"/>
-<text x="-1.27" y="-3.81" size="0.8128" layer="21" font="fixed" rot="R90">&gt;NAME</text>
+<rectangle x1="-1.27" y1="-3.81" x2="1.27" y2="3.81" layer="22"/>
+<text x="-1.37" y="3.51" size="1.27" layer="22" rot="MR270">FEMALE</text>
+<text x="2.4" y="-2.6" size="1.016" layer="22" rot="R90">&gt;NAME</text>
+</package>
+<package name="MALE">
+<pad name="2" x="0" y="0" drill="0.75"/>
+<pad name="1" x="0" y="2.54" drill="0.75"/>
+<pad name="3" x="0" y="-2.54" drill="0.75"/>
+<hole x="0" y="2.54" drill="0.75"/>
+<hole x="0" y="0" drill="0.75"/>
+<hole x="0" y="-2.54" drill="0.75"/>
+<text x="-1.39" y="2.27" size="1.27" layer="22" rot="MR270">MALE</text>
+<wire x1="-1.25" y1="3.75" x2="-1.25" y2="-3.75" width="0.1524" layer="22"/>
+<wire x1="-1.25" y1="-3.75" x2="1.25" y2="-3.75" width="0.1524" layer="22"/>
+<wire x1="1.25" y1="-3.75" x2="1.25" y2="3.75" width="0.1524" layer="22"/>
+<wire x1="1.25" y1="3.75" x2="-1.25" y2="3.75" width="0.1524" layer="22"/>
+<text x="1.6" y="-2.5" size="1.016" layer="22" rot="MR90">&gt;NAME</text>
 </package>
 <package name="LED5050">
 <smd name="P$1" x="-1.6" y="0" dx="5" dy="1.8" layer="1" rot="R90"/>
@@ -7978,8 +7994,8 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <wire x1="-2.5" y1="-2.5" x2="2.5" y2="-2.5" width="0.127" layer="21"/>
 <wire x1="2.5" y1="-2.5" x2="2.5" y2="2.5" width="0.127" layer="21"/>
 <wire x1="-2.5" y1="-2.5" x2="-2.5" y2="2.5" width="0.127" layer="21"/>
-<circle x="-2.5" y="2.5" radius="0.1" width="0.127" layer="21"/>
 <text x="0" y="-1.27" size="0.6096" layer="21" font="fixed" rot="R90">LED</text>
+<rectangle x1="2.3" y1="-2.7" x2="2.7" y2="-2.3" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -8009,7 +8025,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <gate name="G$1" symbol="CONECTOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="3CONECTOR">
+<device name="" package="MALE">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -8026,7 +8042,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <gate name="G$1" symbol="CONECTOR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="3CONECTOR">
+<device name="" package="FEMALE">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -8429,8 +8445,8 @@ Based on the following sources:
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0805" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nF"/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="Eletroblocks Lib" deviceset="CONECTOR_MACHO" device=""/>
-<part name="J2" library="Eletroblocks Lib" deviceset="CONECTOR_FEMEA" device=""/>
+<part name="J1" library="Eletroblocks Lib" deviceset="CONECTOR_MACHO" device="" override_package3d_urn="urn:adsk.eagle:package:27394380/2" override_package_urn="urn:adsk.eagle:footprint:27394382/1"/>
+<part name="J2" library="Eletroblocks Lib" deviceset="CONECTOR_FEMEA" device="" override_package3d_urn="urn:adsk.eagle:package:27394553/2" override_package_urn="urn:adsk.eagle:footprint:27394554/1"/>
 <part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0805W" package3d_urn="urn:adsk.eagle:package:23537/2" value="150R"/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8439,7 +8455,7 @@ Based on the following sources:
 <part name="U1" library="40xx" library_urn="urn:adsk.eagle:library:80" deviceset="4011" device="D" package3d_urn="urn:adsk.eagle:package:823/2" value="74HC132"/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U$1" library="Eletroblocks Lib" deviceset="LED5050" device=""/>
+<part name="U$1" library="Eletroblocks Lib" deviceset="LED5050" device="" override_package3d_urn="urn:adsk.eagle:package:27394567/2" override_package_urn="urn:adsk.eagle:footprint:27394568/1" override_locally_modified="yes"/>
 </parts>
 <sheets>
 <sheet>
@@ -8682,6 +8698,11 @@ packages will not be understood (or retained) with this version.
 <note version="9.5" severity="warning">
 Since Version 9.5, EAGLE supports persistent groups with
 schematics, and board files. Those persistent groups
+will not be understood (or retained) with this version.
+</note>
+<note version="9.4" severity="warning">
+Since Version 9.4, EAGLE supports the overriding of 3D packages
+in schematics and board files. Those overridden 3d packages
 will not be understood (or retained) with this version.
 </note>
 <note version="8.4" severity="warning">
